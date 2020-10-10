@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Travel</string>
+    <string name="mexico">Wonderful Mexico \n 19 Photos</string>
+    <string name="Egypt">Treasures of Egypt \n 19 Photos</string>
+    <string name="paris">Love in paris\n 19 Photos</string>
 </resources>
