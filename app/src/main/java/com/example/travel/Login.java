@@ -21,6 +21,17 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String TAG = "Login";
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(Login.this,Destinations.class);
+            startActivity(intent);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +41,17 @@ public class Login extends AppCompatActivity {
 // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
-        EditText emails,passwords;
+        final EditText emails,passwords;
         emails = findViewById(R.id.email_login);
         passwords = findViewById(R.id.password_login);
-        final String email = emails.getText().toString().trim();
-        final String password = passwords.getText().toString().trim();
+
 
         Button button = findViewById(R.id.login_btn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final String email = emails.getText().toString().trim();
+                final String password = passwords.getText().toString().trim();
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                             @Override

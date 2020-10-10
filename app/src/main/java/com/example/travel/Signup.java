@@ -32,10 +32,7 @@ public class Signup extends AppCompatActivity {
         passcomfirms = findViewById(R.id.signupPasswordConfirm_edittext);
         passs = findViewById(R.id.signupPasswordEdittext);
         emails = findViewById(R.id.signupEmail);
-        final String email = emails.getText().toString();
-        final String pass = passs.getText().toString();
-        final String passcomfirm = passcomfirms.getText().toString();
-        final String name = names.getText().toString();
+
 
 // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -45,7 +42,10 @@ public class Signup extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() && name != null && pass != null && passcomfirm != null){
+                final String email = emails.getText().toString();
+                final String pass = passs.getText().toString();
+                final String passcomfirm = passcomfirms.getText().toString();
+                final String name = names.getText().toString();
                     if(pass.equals(passcomfirm)){
                         mAuth.createUserWithEmailAndPassword(email, pass)
                                 .addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
@@ -56,6 +56,7 @@ public class Signup extends AppCompatActivity {
                                             Log.d("Signup", "createUserWithEmail:success");
                                             FirebaseUser user = mAuth.getCurrentUser();
                                             Intent intent = new Intent(Signup.this,Destinations.class);
+                                            startActivity(intent);
                                         } else {
                                             // If sign in fails, display a message to the user.
                                             Log.w("Signup", "createUserWithEmail:failure", task.getException());
@@ -67,8 +68,6 @@ public class Signup extends AppCompatActivity {
                                     }
                                 });
                     }
-
-                }
             }
         });
 
