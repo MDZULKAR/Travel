@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/fullNameTxtPayment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -97,11 +97,11 @@
         android:text="Card number"
         android:textColor="#050505"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/fullNameTxtPayment"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameTxtPayment" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/cardNumberTxtPayment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -120,11 +120,11 @@
         android:text="CVV"
         android:textColor="#050505"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/fullNameTxtPayment"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameTxtPayment" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/cvvTxtPayment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -135,7 +135,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+        app:layout_constraintStart_toEndOf="@+id/cardNumberTxtPayment"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
@@ -147,11 +147,11 @@
         android:text="Expiry Date"
         android:textColor="#1B1919"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintStart_toStartOf="@+id/cardNumberTxtPayment"
+        app:layout_constraintTop_toBottomOf="@+id/cardNumberTxtPayment" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/expiryDatePayment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/finishPaymentBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

@@ -7,7 +7,7 @@
     tools:context=".Location">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/locationImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,7 +25,7 @@
         android:background="@color/textColor"
         android:text="Complete Peyment"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/locationImage"
+        app:layout_constraintStart_toStartOf="@+id/locationImage"
+        app:layout_constraintTop_toBottomOf="@+id/locationImage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

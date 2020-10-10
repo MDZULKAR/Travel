@@ -45,7 +45,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/egyptbtn"
+                android:id="@+id/egyptButton"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="20dp"
@@ -55,7 +55,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/parisBtn"
+                android:id="@+id/parisButton"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_marginTop="20dp"
