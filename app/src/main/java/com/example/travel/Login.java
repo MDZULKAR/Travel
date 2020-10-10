@@ -3,11 +3,13 @@ package com.example.travel;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -60,5 +62,25 @@ public class Login extends AppCompatActivity {
                         });
             }
         });
+
+        TextView tosignup = findViewById(R.id.create_an_account_txt);
+        tosignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this,Signup.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView forgotpass = findViewById(R.id.forgotpassword_txt);
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this,ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }
